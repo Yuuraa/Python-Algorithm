@@ -1,5 +1,9 @@
 # LeetCode 1월 문제 풀이 목록
 - 0120 valid_parenthesis.py
+- 0121 most_competitive_subseq.py
+- 0122 valid_parenthesis.py
+- 0123 sort_matrix_diag.py
+- 0124
 
 
 ### 0120 Valid Parenthesis
@@ -35,3 +39,12 @@
     대각선은 x, y를 min(m - i, n) 혹은 min(m, n - j) 만큼을 돌며 리스트로 저장했다. 이후 리스트를 소트한 후 값을 matrix에 대입해 주면서 각 대각선을 정렬했다.
 - 더 좋은 아이디어는?
     각 대각선은 모두 unique한 j - i 값을 갖는다. 대각선 내에선 해당 값이 동일하므로 dict 타입으로 값을 저장 후 정렬한 뒤 matrix에 대입해주면 된다.
+
+### 0124 Merge k Sorted Lists
+- 문제: k개의 정렬된 linked list를 한 개의 정렬된 linked list로 합친 후 반환한다
+- 아이디어:
+    모든 linked list를 돌면서 val을 갖고 와 하나의 리스트에 담고, 정렬한 뒤 새로운 링크드 리스트를 이 값들을 이용해 만들었다.
+    상당히 비효율적일 수도 있기는 하다. 공간을 많이 차지하고, 미리 정렬된 링크드 리스트가 들어온다는 문제 조건의 장점을 이용하지 못했다..
+- 다른 사람의 구현: 
+
+    이 사람도 공간을 많이 차지한 것은 동일하지만, 값을 넣을 때 정렬되어 들어갈 수 있도록 heapq를 이용했다!!
