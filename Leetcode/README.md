@@ -3,7 +3,8 @@
 - 0121 most_competitive_subseq.py
 - 0122 valid_parenthesis.py
 - 0123 sort_matrix_diag.py
-- 0124
+- 0124 merge_sorted_lists.py
+- 0125 check_k_places_away.py
 
 
 ### 0120 Valid Parenthesis
@@ -48,3 +49,8 @@
 - 다른 사람의 구현: 
 
     이 사람도 공간을 많이 차지한 것은 동일하지만, 값을 넣을 때 정렬되어 들어갈 수 있도록 heapq를 이용했다!!
+
+### 0125 Check If All 1's Are at Least Length K Places Away
+- 문제: 0과 1로 이루어진 배열과 k 가 들어왔을 때, 1 사이가 최소 k개 이상 씩 떨어져 있는지를 확인하는 문제이다.
+- 아이디어: nums의 길이가 10^5까지였기 때문에, O(nlogn) 이하로 푸는 것이 좋겠다고 생각했다. 선형으로 한 개씩 보면서 distance를 업데이트 하고, 1이 나왔을 때 distance가 k보다 작거나 같다면 False를 리턴하면서 끝내게 했다
+
