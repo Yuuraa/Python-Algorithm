@@ -5,6 +5,7 @@
 - 0123 sort_matrix_diag.py
 - 0124 merge_sorted_lists.py
 - 0125 check_k_places_away.py
+- 0126 min_effort_path.py
 
 
 ### 0120 Valid Parenthesis
@@ -54,3 +55,7 @@
 - 문제: 0과 1로 이루어진 배열과 k 가 들어왔을 때, 1 사이가 최소 k개 이상 씩 떨어져 있는지를 확인하는 문제이다.
 - 아이디어: nums의 길이가 10^5까지였기 때문에, O(nlogn) 이하로 푸는 것이 좋겠다고 생각했다. 선형으로 한 개씩 보면서 distance를 업데이트 하고, 1이 나왔을 때 distance가 k보다 작거나 같다면 False를 리턴하면서 끝내게 했다
 
+### 0126 Path With Minimum Effort
+- 문제: 처음 -> (0,0) -> (m-1, n-1) 끝까지 가는 길에서 한 칸 한 칸 사이의 값의 차의 최댓값이 최소가 되는 path의 값을 찾는다
+- 아이디어: DFS로 구현하여서, 재귀함수 형태로 호출했다. global variable로 해당 최솟값을 업데이트 해주었는데, 이렇게 하니 리트코드에서는 테스트가 제대로 되지 않는다는 문제가 있었다. 리스트 형태로 저장하자 시간 초과 에러가 났다.
+- 다른 사람의 아이디어: DFS로 구현하는데, threshold를 두어서 해당 threshold를 binary search로 만족하면 더 작은 값, 만족하지 않으면 더 큰 값을 찾아보게 했다
