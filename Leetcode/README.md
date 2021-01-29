@@ -7,6 +7,7 @@
 - 0125 check_k_places_away.py
 - 0126 min_effort_path.py
 - 0127 concat_binaries.py
+- 0128 smallest_numeric_string.py
 
 
 ### 0120 Valid Parenthesis
@@ -66,3 +67,10 @@
 - 아이디어: binary 연산을 사용해야 겠다고 생각했다. 나는 뒤에서부터 붙이면서, binstring의 길이를 보고 이를 각각의 숫자에 곱해준 후 (<< 연산을 사용하는 것까지 잘 생각했음!) result에 더하는 연산을 생각했는데, 시간 초과가 났다..
 - 다른 사람의 아이디어: 좀 더 점화식처럼 생각해서, 매 번 늘어나는 길이를 바로 구할 수 있음을 이용했다. 
 - 소감: 뭔가 오토마타 이론이 생각나는 문제였다... 점화식 생각에 좀 약한 것 같으니 보완이 필요하다.
+
+### 0128 Smallest String With A Given Numeric Value
+- 문제: a~z 각 1~26의 numeric 값을 가짐
+
+### 0129 Vertical Order Traversal of a Binary Tree
+- 문제: 이진 트리가 주어졌을 때, 탐색을 거치면서 같은 x 값을 가진 것끼리 묶되, 그 안에서는 1) y값 (깊이) 가 이른 것 먼저, 2) 같은 x, y라면 노드의 값이 작은 것 먼저 순서로 가진 리스트를 반환하면 된다
+- 아이디어: 쭉 순회하면서, 같은 x 값 별로 dict를 만들고 그 안에 (val, y) 로 이루어진 튜플을 넣었다. 이후 리스트로 뽑으면서 y와 val로 정렬하고, 이를 answer에 넣었다
