@@ -8,6 +8,8 @@
 - 0126 min_effort_path.py
 - 0127 concat_binaries.py
 - 0128 smallest_numeric_string.py
+- 0129 bintree_vertical_taversal.py
+- 0130 minimize_deviation.py
 
 
 ### 0120 Valid Parenthesis
@@ -74,3 +76,9 @@
 ### 0129 Vertical Order Traversal of a Binary Tree
 - 문제: 이진 트리가 주어졌을 때, 탐색을 거치면서 같은 x 값을 가진 것끼리 묶되, 그 안에서는 1) y값 (깊이) 가 이른 것 먼저, 2) 같은 x, y라면 노드의 값이 작은 것 먼저 순서로 가진 리스트를 반환하면 된다
 - 아이디어: 쭉 순회하면서, 같은 x 값 별로 dict를 만들고 그 안에 (val, y) 로 이루어진 튜플을 넣었다. 이후 리스트로 뽑으면서 y와 val로 정렬하고, 이를 answer에 넣었다
+
+### 0130 Minimize Deviation in Array
+- 문제: 리스트에서 deviation은 최댓값 - 최솟값의 값이다. 리스트에 있는 원소들에 대해 가할 수 있는 연산은 짝수에 대해선 /2, 홀수에 대해선 *2이다. 리스트가 주어졌을 때 연산을 거쳐(횟수 제한 없음) 얻을 수 있는 deviation 최솟값을 구하라
+- 아이디어: 풀지 못했다 ㅠㅠ 전부 다 거치게 풀려고 했지만 완성할 수 없었고, 완성 했더라도 시간초과 났을 것이다
+- 다른 사람의 아이디어: 일단 2로 나눌 수 있을 때까지 다 나눠본 뒤, 원본과 함께 tuple 형태로 heap에 저장했다. 홀수라면 그냥 저장했다. 초기의 최댓값은 이렇게 저장된, 홀수들에서 정했다. 이후 num, limit을 꺼내면서 max_val - num의 최솟값을 결과값 ans에 대입하고, num < limit 이라면 나눠진 것이므로 *2를 해서 추가해주어서 사실상 모든 경우의 수를 빠르게 탐색해냈다.
+- 핵심: **heap**, **비교 방식**
