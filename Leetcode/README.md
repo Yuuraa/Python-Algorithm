@@ -10,6 +10,7 @@
 - 0128 smallest_numeric_string.py
 - 0129 bintree_vertical_taversal.py
 - 0130 minimize_deviation.py
+- 0131 next_permutation.py
 
 
 ### 0120 Valid Parenthesis
@@ -82,3 +83,8 @@
 - 아이디어: 풀지 못했다 ㅠㅠ 전부 다 거치게 풀려고 했지만 완성할 수 없었고, 완성 했더라도 시간초과 났을 것이다
 - 다른 사람의 아이디어: 일단 2로 나눌 수 있을 때까지 다 나눠본 뒤, 원본과 함께 tuple 형태로 heap에 저장했다. 홀수라면 그냥 저장했다. 초기의 최댓값은 nums 값 중 최댓값이다. 이후 num, limit을 꺼내면서 max_val - num의 최솟값을 결과값 ans에 대입하고, num < limit 이라면 나눠진 것이므로 *2를 해서 추가해주어서 사실상 모든 경우의 수를 빠르게 탐색해냈다.
 - 핵심: **heap**, **비교 방식**
+
+### 0130 Next Permutation
+- 문제: 다음 번째의 permutation을 구하는 문제이다. in-place로 배열에 변화를 줘야하며, 추가 공간도 constant 이상을 쓰면 안된다.
+- 나의 아이디어: 바뀌어야 하는 시작점의 index를 찾는데, 이는 마지막으로 증가하는 곳이다. 이 이후에서 바뀔 곳보다 큰 값 중 최솟값을 찾고, swap 해준다. swap_id 뒷부분의 것들은 순서를 완전히 뒤집어준다
+- 다른 사람 아이디어: 끝부터 감소하는 패턴을 찾고, 이전의 원소들을 바른 곳에 삽입한다.ㅇ
