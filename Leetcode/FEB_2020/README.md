@@ -1,5 +1,6 @@
 # LeetCode 2월 문제 풀이 목록
 - 0201 num_one_bits.py
+- 0202 trim_bin_tree.py
 
 
 ### 0201 Number of 1 Bits
@@ -9,3 +10,8 @@
     1. bit 을 움직여가면서 & 연산을 했고, 0이 아니라면 count를 증가시키는 방법
     2. n & (n-1)을 하면서 n이 0이 아닐 동안 진행하는 방법
 - 아쉬운 점: 입력값이 특이하다 보니 직접 테스트 해볼 수 없었다
+
+### 0202 Trim a Binary Search Tree
+- 문제: Tree와 low, high 값이 주어졌을 때, 트리의 노드 중 값이 low와 high 사이에 들어 있지 않은 것을 빼야 한다
+- 나의 풀이: dfs를 이용해 curr과 left와 right를 업데이트 해주었다
+- 아쉬운 점: Binary search tree이기 때문에, 값들이 root를 기준으로 왼쪽은 더 작은 값들, 오른 쪽은 더 큰 값들이 있을 것이라는 걸 계산하지 못했다. 조건이 이렇게 안주겠거니 하는 생각은 있었지만.. 이를 적절히 활용하지 못했음
