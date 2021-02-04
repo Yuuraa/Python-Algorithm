@@ -2,6 +2,7 @@
 - 0201 num_one_bits.py
 - 0202 trim_bin_tree.py
 - 0203 linked_list_cycle.py
+- 0204 longest_harmonious_subseq.py
 
 
 ### 0201 Number of 1 Bits
@@ -21,3 +22,8 @@
 - 문제: 리스트 내에 사이클이 존재하는지 판별하는 문제이다.
 - 나의 풀이: 노드의 갯수가 10^4개로 한정되어 있었기 때문에, 만약 현재 노드가 None이 아니고 next를 넘긴 횟수가 10^4 이하일 동안 계속 curr.next를 해주어 다음 노드로 넘어갔다. 사이클이 없다면 curr = None인 상태에서 끝나게 되므로 마지막에 curr != None을 리턴하여 사이클이 있다면 True를 반환하게 했다. 날로 먹기다.
 - 다른 사람의 풀이: fast와 slow를 두고 두 개가 일치하게 되는 때가 있는지를 보았다. 언젠가는 겹치는 때가 생기는 것 같다 (이게 문제가 원한 풀이)
+
+### 0204 Longest Harmonious Subsequence
+- 문제: 리스트 내의 subsequence중 최댓값과 최솟값의 차가 정확히 1이 되는 subsequence의 길이를 찾아야 한다.
+- 나의 풀이: 일단 list 내에 있는 모든 숫자들의 수를 세고, n이 있고 만약 n + 1 도 리스트 내에 있는 경우 n의 갯수와 n + 1의 갯수의 합의 최댓값을 답으로 한다. 좀 날로 먹은 것 같다
+- 다른 사람의 풀이: 똑같이 풀었는데, 훨씬 멋지게 풀었다
