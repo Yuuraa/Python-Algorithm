@@ -7,6 +7,7 @@
 - 0206 bintree_rightside.py
 - 0207 shortest_to_character.py
 - 0208 peeking_iterator.py
+- 0209 greater_tree.py
 
 
 ### 0201 Number of 1 Bits
@@ -52,3 +53,8 @@
 ### 0208 Peeking Iterator
 - 문제: 다음에 나올 요소를 미리 보기 할 수 있는 iterator를 만든다. 미리보기 하는 것은 iterator 그 자체의 next에는 영향을 주지 않는다. 미리 정의된 Iterator class가 있는 재미있는 구현 문제였다
 - 나의 풀이: peeking하고 있는 지 여부와 curr_val을 내부에 저장해두었다
+
+### 0209 Convert BST to Greater Tree
+- 문제: BST를 순회하면서, 해당 노드의 값 이상의 값들을 모두 해당 노드의 값에 더해주는 문제이다
+- 나의 풀이: 노드를 방문하는 규칙으로 inorder를 반대로 한, 즉 오른쪽 -> 노드 -> 왼쪽 순으로 방문하는 DFS 코드를 작성했다. 노드의 오른쪽에는 무조건 해당 노드보다 큰 값들이 존재하기 때문에, 해당 노드들을 순회하면서 모든 값을 합친 값을 내보내야 하고, 노드의 왼쪽에는 해당 노드의 값이 합쳐진 값을 더해주어야 하기 때문이다. 처음에는 스택 형태로 짰다가, visited를 처리해 줄 방식이 떠오르지 않아 재귀함수로 수정했다.
+- 다른 사람의 풀이: 똑같은 방식으로 했는데, self.totalval을 두어 계산을 보다 쉽게 했다
