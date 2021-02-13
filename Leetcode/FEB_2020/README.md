@@ -11,6 +11,7 @@
 - 0210 copy_rand_list.py
 - 0211 valid_anagram.py
 - 0212 steps_to_zero.py
+- 0213 shortest_clear.py
 
 
 ### 0201 Number of 1 Bits
@@ -77,3 +78,9 @@
 ### 0212 Number of Steps to Reduce a Number to Zero
 - 문제: 홀수에는 -1, 짝수에는 /2 연산을 하면 주어진 수를 0까지 만드는 데 몇 번의 연산이 필요한지 묻는 문제
 - 나의 풀이: 2로 나누는 횟수는 이진수 표현을 했을 때 자릿수와, 중간에 홀수가 되는 횟수는 이진수 표현을 했을 때 1의 수와 관련 되었다고 생각했다. 두 수를 더하면 정답에 1이 더해진 수가 나오기 떄문에 -1 해주었다 (조금 날로 먹기?)
+
+
+### 0213 Shortest Path in Binary Matrix
+- 문제: 0으로 이루어진 칸만 밟으며 맨 끝깐카지 도달하는 경로의 최소 길이를 묻는 문제
+- 나의 풀이: DFS로 시도했지만 시간 초과가 남
+- 남의 풀이: BFS로 깔끔하게 풀었음
