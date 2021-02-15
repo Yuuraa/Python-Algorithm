@@ -12,6 +12,8 @@
 - 0211 valid_anagram.py
 - 0212 steps_to_zero.py
 - 0213 shortest_clear.py
+- 0214 bipartite_graph.py
+- 0215 k_weakest_rows.py
 
 
 ### 0201 Number of 1 Bits
@@ -84,3 +86,12 @@
 - 문제: 0으로 이루어진 칸만 밟으며 맨 끝깐카지 도달하는 경로의 최소 길이를 묻는 문제
 - 나의 풀이: DFS로 시도했지만 시간 초과가 남
 - 남의 풀이: BFS로 깔끔하게 풀었음
+
+### 0214 Is Graph Bipartite?
+- 문제:
+- 나의 풀이:
+
+### 0215 The K Weakest Rows in a Matrix
+- 문제: 0, 1로 구성된 행렬이 주어졋을 때, 0의 수가 가장 적으면서, index가 더 작은 것이 약한 row이다. k번째로 약한 row를 반환하면 된다
+- 나의 풀이: row개의 (row_id, soldier_num) 으로 이루어진 배열을 하나 만들고, 이를 -soldier_num과 row_id 순으로 정렬해 k개의 값에 대해 row_id를 담은 배열을 반환했다
+- 남의 풀이: 한 줄로 만들었다
