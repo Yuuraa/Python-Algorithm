@@ -14,6 +14,7 @@
 - 0213 shortest_clear.py
 - 0214 bipartite_graph.py
 - 0215 k_weakest_rows.py
+- 0216 letter_case_permut.py
 
 
 ### 0201 Number of 1 Bits
@@ -95,3 +96,9 @@
 - 문제: 0, 1로 구성된 행렬이 주어졋을 때, 0의 수가 가장 적으면서, index가 더 작은 것이 약한 row이다. k번째로 약한 row를 반환하면 된다
 - 나의 풀이: row개의 (row_id, soldier_num) 으로 이루어진 배열을 하나 만들고, 이를 -soldier_num과 row_id 순으로 정렬해 k개의 값에 대해 row_id를 담은 배열을 반환했다
 - 남의 풀이: 한 줄로 만들었다
+
+### 0216 Letter Case Premutation
+- 문제: 문자열이 주어졌을 때, 각 단어를 모두 lowercase 혹은 uppercase로 바꿔 다른 문자열을 만들어 낸다
+- 나의 풀이: isalpaha() 함수와 combinations를 사용해 풀었다. 알파벳인 원소들의 index를 기억해두고, s를 전부 소문자로 바꾼 뒤 알파벳 index들의 0개 ~ alphabet 갯수 개 만큼의 조합을 구해 전부 upper()로 바꾸는 연산을 통해 새로운 문자열을 만들었다.
+- 다른 사람의 풀이: 백트래킹을 이용하는 방법으로는 dfs를 통해 해당 문자 인덱스가 알파벳이라면, lower()를 취한 뒤 append해주거나, 아니라면 upper()를 취한 뒤 문자열을 만들 것 같다.
+    One-line 풀이로 product 기능을 사용했다.
