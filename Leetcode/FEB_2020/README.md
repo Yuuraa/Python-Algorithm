@@ -15,7 +15,8 @@
 - 0214 bipartite_graph.py
 - 0215 k_weakest_rows.py
 - 0216 letter_case_permut.py
-
+- 0217
+- 0218 arithmetic_slices.py
 
 ### 0201 Number of 1 Bits
 - 문제: 숫자가 주어졌을 때, 해당 숫자의 binary 표현(2의 보수 표현)에서 1의 갯수를 셈
@@ -97,8 +98,13 @@
 - 나의 풀이: row개의 (row_id, soldier_num) 으로 이루어진 배열을 하나 만들고, 이를 -soldier_num과 row_id 순으로 정렬해 k개의 값에 대해 row_id를 담은 배열을 반환했다
 - 남의 풀이: 한 줄로 만들었다
 
-### 0216 Letter Case Premutation
+### 0216 Letter Case Permutation
 - 문제: 문자열이 주어졌을 때, 각 단어를 모두 lowercase 혹은 uppercase로 바꿔 다른 문자열을 만들어 낸다
 - 나의 풀이: isalpaha() 함수와 combinations를 사용해 풀었다. 알파벳인 원소들의 index를 기억해두고, s를 전부 소문자로 바꾼 뒤 알파벳 index들의 0개 ~ alphabet 갯수 개 만큼의 조합을 구해 전부 upper()로 바꾸는 연산을 통해 새로운 문자열을 만들었다.
 - 다른 사람의 풀이: 백트래킹을 이용하는 방법으로는 dfs를 통해 해당 문자 인덱스가 알파벳이라면, lower()를 취한 뒤 append해주거나, 아니라면 upper()를 취한 뒤 문자열을 만들 것 같다.
     One-line 풀이로 product 기능을 사용했다.
+
+
+### 0218 Arithmetic Slices
+- 문제: 값의 차가 동일한 연속된 시퀀스의 갯수를 구함
+- 나의 풀이: 리스트 내 인접 요소들 사이 차를 담은 배열을 만들고, 동일한 값이 반복되는 길이가 n이라면 해당 n에서는 n*(n-1)//2 개의 시퀀스가 나올 수 있음을 이용함
