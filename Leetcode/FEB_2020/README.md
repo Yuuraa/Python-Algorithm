@@ -18,6 +18,7 @@
 - 0217
 - 0218 arithmetic_slices.py
 - 0219 make_valid_parentheses.py
+- 0220 roman_to_int.py
 
 
 ### 0201 Number of 1 Bits
@@ -111,7 +112,12 @@
 - 문제: 값의 차가 동일한 연속된 시퀀스의 갯수를 구함
 - 나의 풀이: 리스트 내 인접 요소들 사이 차를 담은 배열을 만들고, 동일한 값이 반복되는 길이가 n이라면 해당 n에서는 n*(n-1)//2 개의 시퀀스가 나올 수 있음을 이용함
 
-### 0218 Mimimum Remove to Make Valid Parentheses
+### 0219 Mimimum Remove to Make Valid Parentheses
 - 문제: 괄호를 포함한 문장이 주어졌을 떄, 잘못된 parenthesis 사용을 없애기 위해 몇 번의 remove 작업이 필요한지 묻는 문제이다
 - 나의 풀이: 문자열을 돌며 parenthesis들을 저장하는 stack을 만들고, 정상적인 값들은 버렸다. 정상적이지 않아 스택에 남게 되는 (parentesis, idx) 조합에서 idx들을 뽑고, 해당 idx의 문자들을 포함하지 않는 새로운 문자열을 만들어 valid하게 만들었다
 - 다른 사람의 풀이: parenthesis 별로 +, -를 더하고 빼면서 연산을 수행했다. 메모리 측면에서 훨씬 효율적인 것 같다
+
+### 0220 Roman to Integer
+- 문제: 로만 표기법의 숫자 문자열이 들어왔을 때, 아웃풋으로 정수를 낸다
+- 나의 풀이: 뒤부터 보면서, 만약 이전에 나왔던 숫자보다 자신의 값이 더 작다면 숫자 값을 빼주고, 아니라면 더해주었다
+- 다른 사람의 풀이: 더 짧게 풀었지만 동일하다
