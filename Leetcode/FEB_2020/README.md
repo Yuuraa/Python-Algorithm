@@ -22,9 +22,10 @@
 - [0221 broken_calculator.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0221-broken-calculator)
 - [0222 longest_word.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0222-longest-word-dictionary-through-deleting)
 - [0223 search_2d_mat.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-search-2d-matrix-ii)
+- [0224 parentheses_score.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-score-of-parentheses)
 
 
-### 0201 Number of 1 Bits
+### 0201 Number of 1 Bits 
 - 문제: 숫자가 주어졌을 때, 해당 숫자의 binary 표현(2의 보수 표현)에서 1의 갯수를 셈
 - 나의 풀이: 파이썬의 라이브러리를 사용함
 - 다른 사람의 풀이: 
@@ -140,4 +141,9 @@
 ### 0223 Search 2D Matrix II
 - 문제: 열 별로, 행 별로 정렬이 된 2차원 행렬과 찾고자 하는 숫자 target이 주어졌을 때, target이 행렬 내 있는지 효율적으로 찾기를 묻는 문제이다
 - 나의 풀이: 나는 리스트 안의 원소를 찾는 연산이 O(1)이라고 알고 있었기 때문에 각 열을 돌면서 첫번째 값이 target 값보다 크면 더 이상 찾아보지 않는 식으로 구현했다. 날로 먹기..
-- 다른 사람의 풀이: 0, max_len - 1 좌표에서 시작해 x와 y 한 칸씩을 움직이며 값을 조정했다. O(m + n)이 걸린다고 했는데, 나의 것이 날로 먹기이기는 해도 더 낫지 않나 싶었다..
+- 다른 사람의 풀이: 0, max_len - 1 좌표에서 시작해 x와 y 한 칸씩을 움직이며 값을 조정했다. O(m + n)이 걸린다고 했는데, 나의 것이 날로 먹기이기는 해도 더 낫지 않나 싶었다.
+
+### 0224 Score of Parentheses
+- 문제: parentheses가 주어졌을 때, (sub parentheses) 의 형태는 sub parentheses의 점수 * 2배의 점수를 얻을 수 있고, (subparenthesis) 개당 1점을 얻는다
+- 나의 풀이: 스택을 두고, 몇 개의 왼쪽 것이 쌓였는지, 그리고 몇 개가 한 묶음으로 묶이는 지를 l_count와 r_count로 구했다. 더 간단한 방법이 있을 것 같았는데 떠올리지 못했다 ㅠ 처음에는 같은 차원? 곱하기? 단계에 있는 것끼리는 먼저 더하고 그 뒤 곱하려고 했는데, 그냥 다 따로 2배를 곱하는 식으로 각자 더했다
+- 다른 사람의 풀이: 훨씬 간단하게 풀었다. 묶음이 있는지, 없는지를 확인하고 ()가 딱 나오는 부분에서 1이 더해지고 여기에 값들이 곱해지는 것이라는 점에서 착안했다. 나와 아이디어 자체는 많이 다르지 않았는데 훨씬 깔끔한 구현 방식을 택했다
