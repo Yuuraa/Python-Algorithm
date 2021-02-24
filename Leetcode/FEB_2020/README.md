@@ -1,26 +1,31 @@
 # LeetCode 2월 문제 풀이 목록
-- 0201 num_one_bits.py
-- 0202 trim_bin_tree.py
-- 0203 linked_list_cycle.py
-- 0204 longest_harmonious_subseq.py
-- 0205 simplify_path.py
-- 0206 bintree_rightside.py
-- 0207 shortest_to_character.py
-- 0208 peeking_iterator.py
-- 0209 greater_tree.py
-- 0210 copy_rand_list.py
-- 0211 valid_anagram.py
-- 0212 steps_to_zero.py
-- 0213 shortest_clear.py
-- 0214 bipartite_graph.py
-- 0215 k_weakest_rows.py
-- 0216 letter_case_permut.py
-- 0217
-- 0218 arithmetic_slices.py
-- 0219 make_valid_parentheses.py
+- [0201 num_one_bits.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0201-number-of-1-bits)
+- [0202 trim_bin_tree.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0202-trim-a-binary-search-tree)
+- [0203 linked_list_cycle.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0203-linked-list-cycle)
+- [0204 longest_harmonious_subseq.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0204-longest-harmonious-subsequence)
+- [0205 simplify_path.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0205-simplify-path)
+- [0206 bintree_rightside.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0206-binary-tree-right-side-view)
+- [0207 shortest_to_character.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0207-shortest-distance-to-a-character)
+- [0208 peeking_iterator.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0208-peeking-iterator)
+- [0209 greater_tree.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0209-convert-bst-to-greater-tree)
+- [0210 copy_rand_list.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0210-copy-list-with-random-pointer)
+- [0211 valid_anagram.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0211-valid-anagram)
+- [0212 steps_to_zero.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0212-number-of-steps-to-reduce-a-number-to-zero)
+- [0213 shortest_clear.py]https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0213-shortest-path-in-binary-matrix)
+- [0214 bipartite_graph.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0214-is-graph-bipartite)
+- [0215 k_weakest_rows.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0215-the-k-weakest-rows-in-a-matrix)
+- [0216 letter_case_permut.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0216-letter-case-permutation)
+- [0217]()
+- [0218 arithmetic_slices.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0218-arithmetic-slices)
+- [0219 make_valid_parentheses.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0219-mimimum-remove-to-make-valid-parentheses)
+- [0220 roman_to_int.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0220-roman-to-integer)
+- [0221 broken_calculator.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0221-broken-calculator)
+- [0222 longest_word.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0222-longest-word-dictionary-through-deleting)
+- [0223 search_2d_mat.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-search-2d-matrix-ii)
+- [0224 parentheses_score.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-score-of-parentheses)
 
 
-### 0201 Number of 1 Bits
+### 0201 Number of 1 Bits 
 - 문제: 숫자가 주어졌을 때, 해당 숫자의 binary 표현(2의 보수 표현)에서 1의 갯수를 셈
 - 나의 풀이: 파이썬의 라이브러리를 사용함
 - 다른 사람의 풀이: 
@@ -111,7 +116,34 @@
 - 문제: 값의 차가 동일한 연속된 시퀀스의 갯수를 구함
 - 나의 풀이: 리스트 내 인접 요소들 사이 차를 담은 배열을 만들고, 동일한 값이 반복되는 길이가 n이라면 해당 n에서는 n*(n-1)//2 개의 시퀀스가 나올 수 있음을 이용함
 
-### 0218 Mimimum Remove to Make Valid Parentheses
+### 0219 Mimimum Remove to Make Valid Parentheses
 - 문제: 괄호를 포함한 문장이 주어졌을 떄, 잘못된 parenthesis 사용을 없애기 위해 몇 번의 remove 작업이 필요한지 묻는 문제이다
 - 나의 풀이: 문자열을 돌며 parenthesis들을 저장하는 stack을 만들고, 정상적인 값들은 버렸다. 정상적이지 않아 스택에 남게 되는 (parentesis, idx) 조합에서 idx들을 뽑고, 해당 idx의 문자들을 포함하지 않는 새로운 문자열을 만들어 valid하게 만들었다
 - 다른 사람의 풀이: parenthesis 별로 +, -를 더하고 빼면서 연산을 수행했다. 메모리 측면에서 훨씬 효율적인 것 같다
+
+### 0220 Roman to Integer
+- 문제: 로만 표기법의 숫자 문자열이 들어왔을 때, 아웃풋으로 정수를 낸다
+- 나의 풀이: 뒤부터 보면서, 만약 이전에 나왔던 숫자보다 자신의 값이 더 작다면 숫자 값을 빼주고, 아니라면 더해주었다
+- 다른 사람의 풀이: 더 짧게 풀었지만 동일하다
+
+### 0221 Broken Calculator
+- 문제: 계산기가 고장이 났는데, 전시된 숫자에 두 배를 곱하거나, 1을 빼는 작업밖에 할 수 없다. calcualtor가 숫자 X를 보여주고 있을 때, Y를 만들기 위한 최소 연산의 수를 구해라
+- 나의 풀이: 처음에는 DFS로 파고 들어가는 연산을 했다. 1 -> 1000000으로 가는 과제에서 Maximum recursion error가 났고, 배열로 바꾸어 전체에 연산을 하게 해보았지만 그래도 시간 초과가 났다. 당연한 결과였다... 다시 고민해보니, y에서 거꾸로 가는 편이 훨씬 쉬울 것 같았다. y가 작아질수록, -1 연산을 사용해 차를 줄이는 수가 적어질 것이었기 때문이다. 결국 -1 연산을 해줘야 하는 때는 x가 y보다 커졌을 때 뿐인데.. 이런 식으로 생각하다가 y가 x보다 클 동안 2의 배수면 나누기 2, 아니면 + 1 연산을 하고 마지막에 x와의 차를 연산 횟수와 더해주자 풀 수 있었다. 무작정 구현하려고 하지 말고 어떻게 문제에 접근해야 풀 수 있을지를 고민해 봐야겠다
+- 복잡도: Time: O(logY) Space: O(1)
+- 다른 사람의 풀이: y -> x 로 푸는 것은 접근이 같으며, 재귀 함수 형식으로 푸셨는데 어차피 이 방식이라면 for문으로 해결하는 것이 훨씬 효율적이었을 것 같다. 사고적인 증명이 좀 더 잘 되어있어서 접근법이 옳다는 걸 증명해 주었다
+
+### 0222 Longest Word Dictionary through Deleting
+- 문제: 하나의 string, s와 여러 개 string들의 배열, d가 주어졌을 때 s의 문자 몇 개를 삭제하면 만들 수 있는 d 내의 문자열 중 가장 길이가 길고, 사전적으로 앞인 값을 반환하시오
+- 나의 풀이: 일단 가장 길고, 그 중 가장 사전적으로 앞선 순으로 확인하며 subsequence가 맞는 것이 나오면 바로 값을 반환함
+- 다른 사람의 풀이: 동일하지만, 우선 모든 것들에 대해 subsequence가 되는지를 구한 뒤 그 중 길이가 최대가 되고 사전적으로 앞인 것을 반환함
+
+
+### 0223 Search 2D Matrix II
+- 문제: 열 별로, 행 별로 정렬이 된 2차원 행렬과 찾고자 하는 숫자 target이 주어졌을 때, target이 행렬 내 있는지 효율적으로 찾기를 묻는 문제이다
+- 나의 풀이: 나는 리스트 안의 원소를 찾는 연산이 O(1)이라고 알고 있었기 때문에 각 열을 돌면서 첫번째 값이 target 값보다 크면 더 이상 찾아보지 않는 식으로 구현했다. 날로 먹기..
+- 다른 사람의 풀이: 0, max_len - 1 좌표에서 시작해 x와 y 한 칸씩을 움직이며 값을 조정했다. O(m + n)이 걸린다고 했는데, 나의 것이 날로 먹기이기는 해도 더 낫지 않나 싶었다.
+
+### 0224 Score of Parentheses
+- 문제: parentheses가 주어졌을 때, (sub parentheses) 의 형태는 sub parentheses의 점수 * 2배의 점수를 얻을 수 있고, (subparenthesis) 개당 1점을 얻는다
+- 나의 풀이: 스택을 두고, 몇 개의 왼쪽 것이 쌓였는지, 그리고 몇 개가 한 묶음으로 묶이는 지를 l_count와 r_count로 구했다. 더 간단한 방법이 있을 것 같았는데 떠올리지 못했다 ㅠ 처음에는 같은 차원? 곱하기? 단계에 있는 것끼리는 먼저 더하고 그 뒤 곱하려고 했는데, 그냥 다 따로 2배를 곱하는 식으로 각자 더했다
+- 다른 사람의 풀이: 훨씬 간단하게 풀었다. 묶음이 있는지, 없는지를 확인하고 ()가 딱 나오는 부분에서 1이 더해지고 여기에 값들이 곱해지는 것이라는 점에서 착안했다. 나와 아이디어 자체는 많이 다르지 않았는데 훨씬 깔끔한 구현 방식을 택했다
