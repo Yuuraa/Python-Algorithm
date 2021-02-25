@@ -22,7 +22,8 @@
 - [0221 broken_calculator.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0221-broken-calculator)
 - [0222 longest_word.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0222-longest-word-dictionary-through-deleting)
 - [0223 search_2d_mat.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-search-2d-matrix-ii)
-- [0224 parentheses_score.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-score-of-parentheses)
+- [0224 parentheses_score.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0224-score-of-parentheses)
+- [0225 unsorted_subarray.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0225-score-of-parentheses)
 
 
 ### 0201 Number of 1 Bits 
@@ -147,3 +148,8 @@
 - 문제: parentheses가 주어졌을 때, (sub parentheses) 의 형태는 sub parentheses의 점수 * 2배의 점수를 얻을 수 있고, (subparenthesis) 개당 1점을 얻는다
 - 나의 풀이: 스택을 두고, 몇 개의 왼쪽 것이 쌓였는지, 그리고 몇 개가 한 묶음으로 묶이는 지를 l_count와 r_count로 구했다. 더 간단한 방법이 있을 것 같았는데 떠올리지 못했다 ㅠ 처음에는 같은 차원? 곱하기? 단계에 있는 것끼리는 먼저 더하고 그 뒤 곱하려고 했는데, 그냥 다 따로 2배를 곱하는 식으로 각자 더했다
 - 다른 사람의 풀이: 훨씬 간단하게 풀었다. 묶음이 있는지, 없는지를 확인하고 ()가 딱 나오는 부분에서 1이 더해지고 여기에 값들이 곱해지는 것이라는 점에서 착안했다. 나와 아이디어 자체는 많이 다르지 않았는데 훨씬 깔끔한 구현 방식을 택했다
+
+### 0225 Shortest Unsorted Continuous Subarray
+- 문제: 배열이 주어졌을 때, 배열을 오름차순으로 정렬되게 만들기 위해 정렬해야 할 연속된 subarray의 최단 길이를 구한다
+- 나의 풀이: 일단 각 연속된 값들 사이의 차를 구해 num_diffs 배열에 저장하고, 여기서 음수 값은 정렬되지 않은 부분이므로 해당 index들을 저장해 두었다가 가장 이른 곳 ~ 가장 늦게 나온 음수값의 인덱스 차를 이용해 첫 번째 길이를 구했다. 해당 subarray 내에서 최솟값과 최댓값을 찾고 subarray의 시작 전에 최솟값보다 큰 값이 있거나, 끝 뒤에 최댓값보다 작은 값이 있다면 sorting 해줘야 하는 subarray에 추가해 주었다. 좀 지저분하게 푼 점이 아쉽다
+- 다른 사람의 풀이: 
