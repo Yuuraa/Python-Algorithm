@@ -24,6 +24,7 @@
 - [0223 search_2d_mat.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0223-search-2d-matrix-ii)
 - [0224 parentheses_score.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0224-score-of-parentheses)
 - [0225 unsorted_subarray.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020#0225-score-of-parentheses)
+- [0226 validate_stack.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2020/#0226-validate-stack-sequences)
 
 
 ### 0201 Number of 1 Bits 
@@ -153,3 +154,9 @@
 - 문제: 배열이 주어졌을 때, 배열을 오름차순으로 정렬되게 만들기 위해 정렬해야 할 연속된 subarray의 최단 길이를 구한다
 - 나의 풀이: 일단 각 연속된 값들 사이의 차를 구해 num_diffs 배열에 저장하고, 여기서 음수 값은 정렬되지 않은 부분이므로 해당 index들을 저장해 두었다가 가장 이른 곳 ~ 가장 늦게 나온 음수값의 인덱스 차를 이용해 첫 번째 길이를 구했다. 해당 subarray 내에서 최솟값과 최댓값을 찾고 subarray의 시작 전에 최솟값보다 큰 값이 있거나, 끝 뒤에 최댓값보다 작은 값이 있다면 sorting 해줘야 하는 subarray에 추가해 주었다. 좀 지저분하게 푼 점이 아쉽다
 - 다른 사람의 풀이: 
+
+
+### 0226 Validate Stack Sequences
+- 문제: 값들이 스택에 push 된 순서와 pop 된 순서가 주어졌을 때, 해당 순서로 값들이 push 된 스택이 주어진 순서대로 pop 되는 것이 가능한지를 반환하는 문제이다.
+- 나의 풀이: 실제로 시뮬레이션 해보면서 풀기로 했다. 스택에 차례로 쌓고, 만약 popped에서 요구하는 값이 스택의 마지막 값과 다르거나 스택이 비어 있다면 Pushed에서 popped의 요구사항과 같아질 때까지 다시 넣는데, 만약 pushed의 길이를 넘어서서도 요구하면 이는 이 전에 나온 값을 요구하는 것과 같으므로 False를 반환함
+- 다른 사람의 풀이: 거의 동일하게 풀었다
