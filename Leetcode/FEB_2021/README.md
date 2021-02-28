@@ -26,7 +26,7 @@
 - [0225 unsorted_subarray.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2021#0225-score-of-parentheses)
 - [0226 validate_stack.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2021/#0226-validate-stack-sequences)
 - [0227 divide_integers.py](https://github.com/Yuuraa/Pyhton-Algorithm/tree/main/Leetcode/FEB_2021/#0227-divide-two-integers)
-
+- [0228 max_freq_stack.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/FEB_2021/#0228-maximum-frequency-stack)
 
 
 ### 0201 Number of 1 Bits 
@@ -167,3 +167,9 @@
 - 문제: 두 정수 dividend와 divisor가 주어졌을 때, dividend를 divisor로 나눈 값을, 소숫점 자리를 제거하고 반환하는 문제
 - 나의 풀이: dividend와 divisor가 나누어 떨어질 때에는 "//" 값을 그래도 반환했다. 나누어떨어지지 않을 경우 "//" 연산을 이용해 몫만 남기고 음수이면 +1 해주었다.
 - 다른 사람의 풀이: **Bitwise operation**을 이용해 풀었다. 문제의 의도였던 듯 하다!!
+
+
+### 0228 Maximum Frequency Stack
+- 문제: Maximum Frequency Stack을 구현해, 가장 빈번한 값을 반환하거나 빈도가 같은 값들 중 가장 마지막에 들어온 값을 반환하다
+- 나의 풀이: max를 사용해 풀어 보았으나 시간 초과가 났다
+- 다른 사람의 풀이: freq를 기준으로 딕셔너리를 만들었다
