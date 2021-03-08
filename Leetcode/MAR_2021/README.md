@@ -6,6 +6,7 @@
 - [0305 average_bintree.py]()
 - [0306 short_encoding.py]()
 - [0307 design_hashmap.py]()
+- [0308 remove_palindrome.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -41,3 +42,7 @@
 - 문제: 해쉬맵을 직접 클래스로 만들어 보는 문제
 - 나의 풀이: key와 value에 대해 매칭되는 쌍끼리 같은 index를 갖도록 하고 각자 배열을 만들어 저장함
 - 다른 사람의 풀이: (key, value) 쌍으로 이루어진 배열을 만듦
+
+### 0308 Remove Palindromic Subsequences
+- 문제: 문자 a와 b로 이루어진 문자열 s가 주어졌을 때, 한 번에 하나의 palindromic subsequence를 제거하면서 최종적으로 빈 문자열이 될 때까지 걸리는 최소 횟수를 구하는 문제
+- 나의 풀이: 다른 사람들의 것과 동일한데, substring이었다면 어려운 문제였겠지만, subsequence이기 때문에 palindromic string이 아니라면 처음에 a를 모두 제거하고 뒤에 b를 모두 제거하면 된다. 빈 문장은 0, 길이가 1이거나 palindrome이면 1, 아니면 2를 반환하면 된다.
