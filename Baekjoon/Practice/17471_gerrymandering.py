@@ -17,20 +17,15 @@ for i in range(1, n+1):
 
 def check_connected(combs):
     visited_nodes = [combs[0]]
-    print("visited: ")
     queue = deque([combs[0]])
-    print(combs)
-    # print(queue)
 
     while queue:
         now = queue.popleft()
-        print("Now:" ,now)
-        print("Q:" ,queue)
         for adj_node in graph[now]:
             if adj_node in combs and adj_node not in visited_nodes:
                 visited_nodes.append(adj_node)
-                queue.append(visited_nodes)
-    
+                queue.append(adj_node)
+    # print(combs, visited_nodes)
     return set(visited_nodes) == set(combs)
 
 
@@ -46,7 +41,7 @@ def population_diff(combs, others):
 
 def search_through():
     result = sum(populations)
-    for num in range(1, n//2):
+    for num in range(1, n//2+1):
         for combs in combinations(nodes, num):
             combs = list(combs)
             others = [node for node in nodes if node not in combs]
