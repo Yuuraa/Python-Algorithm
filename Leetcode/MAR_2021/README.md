@@ -7,6 +7,7 @@
 - [0306 short_encoding.py]()
 - [0307 design_hashmap.py]()
 - [0308 remove_palindrome.py]()
+- [0309 add_tree_row.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -46,3 +47,9 @@
 ### 0308 Remove Palindromic Subsequences
 - 문제: 문자 a와 b로 이루어진 문자열 s가 주어졌을 때, 한 번에 하나의 palindromic subsequence를 제거하면서 최종적으로 빈 문자열이 될 때까지 걸리는 최소 횟수를 구하는 문제
 - 나의 풀이: 다른 사람들의 것과 동일한데, substring이었다면 어려운 문제였겠지만, subsequence이기 때문에 palindromic string이 아니라면 처음에 a를 모두 제거하고 뒤에 b를 모두 제거하면 된다. 빈 문장은 0, 길이가 1이거나 palindrome이면 1, 아니면 2를 반환하면 된다.
+
+
+### 0309 Add One Row to Tree
+- 문제: TreeNode 자료형에 하나의 row를 추가해야 한다. Row에 새로 들어갈 값과, 몇 번째 row에 들어갈지 v, d 인자가 원본 TreeNode의 root와 함께 주어진다. 만약 d = 1이라면 맨 위에 추가하고 원본 root를 left child로 만든다. 이외의 경우에는, d 번째 층에 있는 모든 노드들에 대해 왼쪽과 오른쪽에 v 값을 가진 노드를 추가하고, 왼쪽 새 노드의 왼쪽 자식을 원본의 왼쪽 자식으로, 오른쪽 새 노드의 오른쪽 자식을 원본의 오른 쪽 자식 노드로 설정한 뒤 새로운 트리를 반환한다
+- 나의 풀이: 정직하게 풀었고, DFS 형식으로 더 깊은 층으로 들어가면서 curr_depth 가 d-1과  일치한다면 TreeNode를 삽입했다. d = 1인 경우는 따로 처리해 주었다
+- 다른 사람의 풀이: 전체 add_one_row 함수를 DFS 로 활용했다. 만약 d를 오히려 감소시켜주면서 깊이 들어갔다.
