@@ -75,7 +75,7 @@
     - 공식 도큐먼트는 [이곳](https://docs.python.org/3/library/functools.html)이다
 - [코드 링크](https://github.com/Yuuraa/Python-Algorithm/blob/main/Leetcode/MAR_2021/coin_change.py)
 
-### 0312 Check If a Strig Contains All Binart Codes of Size K
+### 0312 Check If a Strig Contains All Binary Codes of Size K
 - 문제: binary string s 와 integer k가 주어졌을 때, k길이로 이루어진 모든 binary code가 모두 s의 substring이 될 수 있는지 여부를 반환한다
 - 나의 풀이: O(N) 까지는 수용 가능한 길이의 s가 주어지므로, s를 한 번 순회하며 k 길이 만큼씩을 잘라 substring의 set에 추가했다. set의 원소의 수가 2**k와 같아지면 전부 표현 가능한 것이니 이를 반환하게 했다
 - 다른 사람의 풀이: 해쉬를 이용했다. 이해할 수 없었따..ㅠㅠ
