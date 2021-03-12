@@ -10,6 +10,7 @@
 - [0309 add_tree_row.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0309-add-one-row-to-tree)
 - [0310 int_to_roman.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0310-integer-to-roman)
 - [0311 coin_change.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0311-coin-change)
+- [0312 has_all_bincode.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -73,3 +74,8 @@
 - 다른 사람의 풀이: lru_cache 라는 것을 활용했다. @lru_cache는 functools에서 제공하는 데코레이터의 일종으로, 메모이제이션을 해서 인자로 넘겨준 maxsize갯수 만큼이 가장 최근 호출들을 저장해 둔다. Expensive, I/O bound한 함수들이 동일한 argument로 주기적으로 호출될 때 유용하게 사용할 수 있다고 한다. 이를 사용하니 따로 메모이제이션을 할 딕셔너리를 만들어주지 않고도 손쉽게 DP 구현이 가능했다.
     - 공식 도큐먼트는 [이곳](https://docs.python.org/3/library/functools.html)이다
 - [코드 링크](https://github.com/Yuuraa/Python-Algorithm/blob/main/Leetcode/MAR_2021/coin_change.py)
+
+### 0312 Check If a Strig Contains All Binart Codes of Size K
+- 문제: binary string s 와 integer k가 주어졌을 때, k길이로 이루어진 모든 binary code가 모두 s의 substring이 될 수 있는지 여부를 반환한다
+- 나의 풀이: O(N) 까지는 수용 가능한 길이의 s가 주어지므로, s를 한 번 순회하며 k 길이 만큼씩을 잘라 substring의 set에 추가했다. set의 원소의 수가 2**k와 같아지면 전부 표현 가능한 것이니 이를 반환하게 했다
+- 다른 사람의 풀이: 해쉬를 이용했다. 이해할 수 없었따..ㅠㅠ
