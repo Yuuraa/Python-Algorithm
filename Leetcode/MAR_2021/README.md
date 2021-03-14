@@ -11,7 +11,8 @@
 - [0310 int_to_roman.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0310-integer-to-roman)
 - [0311 coin_change.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0311-coin-change)
 - [0312 has_all_bincode.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0312-check-if-a-strig-contains-all-binary-codes-of-size-k)
-- [0313 bintree_with_factors.py]()
+- [0313 bintree_with_factors.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0313-binary-trees-with-factors)
+- [0314 swap_nodes.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -86,3 +87,9 @@
 - 문제: 숫자들의 배열이 주어졌을 때, 한 숫자를 한 번 이상 사용해 배열 내의 다른 숫자를 만들 수 있다면 이를 트리 형태로 나타낼 수 있다. Binary tree형태로 배열 내 두 개의 같거나 다른 숫자를 곱해 만들 수 있는 숫자들을 표현하는 것의 갯수를 구하시오
 - 나의 풀이: 숫자들을 크기 순으로 정렬한 뒤, 자신보다 이전에 나왔던 숫자들 중 나누어 떨어지는 것이 있는지, 나누어 떨어진다면 그 몫도 숫자들에 들어가 있는지를 확인한다. 2, 5 -> 10 이라면 2, 5에서 한 번, 5, 2에서 한 번 더해주므로 각 나눠지는 숫자들의 경우의 수의 곱을 발견할 때마다 더해주며, dp로 저장해 두어 사용한다
 - 다른 사람의 풀이: 동일한 방식으로 풀었는데, xrange라는 기능을 사용했다. 조사해보니, range는 리스트 타입을 반환하는 반면, xrange는 고정된 크기의 xrange 타입을 반환하는데, 이는 자신에 속한 데이터값을 한꺼번에 메모리에 로드하는 것이 아니라 해당 값에 접근할 때마다 그 값을 하나씩 로딩하는 방법이라고 한다. Generator의 yield를 사용했을 때와 비슷한 효과라고 생각하면 된다.
+- [코드 링크](https://github.com/Yuuraa/Python-Algorithm/blob/main/Leetcode/MAR_2021/bintree_with_factors.py)
+
+### 0314 Swapping Nodes in a Linked List
+- 문제: 링크드 리스트의 헤드와 k가 주어졌을 때, 첫번째부터 k번째 노드와, 마지막부터 k 번째 노드의 노드들을 바꾼 값을 출력하는 문제이다.
+- 나의 풀이: 노드들을 리스트 형태로 저장해둔 뒤, 뒤에서 k번째 노드와 앞에서 k번째 노드가 연속된 경우와 그렇지 않은 경우를 분리해 스왑했다
+- 다른 사람의 풀이: 링크드 리스트의 특징을 이용해 경우를 나누지 않고도 스왑했다
