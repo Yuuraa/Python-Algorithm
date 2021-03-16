@@ -13,6 +13,7 @@
 - [0312 has_all_bincode.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0312-check-if-a-strig-contains-all-binary-codes-of-size-k)
 - [0313 bintree_with_factors.py](https://github.com/Yuuraa/Python-Algorithm/tree/main/Leetcode/MAR_2021#0313-binary-trees-with-factors)
 - [0314 swap_nodes.py]()
+- [0315 encode_and_decode.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -93,3 +94,8 @@
 - 문제: 링크드 리스트의 헤드와 k가 주어졌을 때, 첫번째부터 k번째 노드와, 마지막부터 k 번째 노드의 노드들을 바꾼 값을 출력하는 문제이다.
 - 나의 풀이: 노드들을 리스트 형태로 저장해둔 뒤, 뒤에서 k번째 노드와 앞에서 k번째 노드가 연속된 경우와 그렇지 않은 경우를 분리해 스왑했다
 - 다른 사람의 풀이: 링크드 리스트의 특징을 이용해 경우를 나누지 않고도 스왑했다
+
+### 0315 Encode and Decode TinyURL
+- 문제: URL을 입력하면, 작은 짧은 URL로 만들어 주어야 하는 알고리즘이다. URL을 인코딩하고 디코딩할 수 있게 만들기만 하면 된다
+- 나의 풀이: Base62 인코딩 방식을 사용했다. URL 압축에 많이 사용되는 방식으로, 주어진 url에 고유한 숫자를 부여한 뒤, 그 숫자를 base62 방식으로 인코딩하되, 각 0~61 값마다 그에 해당하는 캐릭터를 대신 넣어 인코딩 된 것을 만든다
+- 다른 사람의 풀이: 동일하게 풀었다
