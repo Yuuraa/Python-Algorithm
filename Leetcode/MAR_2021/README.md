@@ -25,6 +25,8 @@
 - [0324 advantage_shuffle.py]()
 - [0325 water_flow.py]()
 - [0326 word_subsets.py]()
+- [0327 palindromic_substrings.py]()
+- [0329 filp_bintree_preorder.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -159,3 +161,10 @@
 - 문제: 단어들의 배열 A와 B가 주어졌을 때, A 내의 단어 중 B의 단어들에 대해 universal 한 단어들의 목록을 반환하는 문제. 어떤 단어가 B에 대해 universal하다는 것은, 그 단어가 B 배열의 모든 단어들에 대해, 그들 안에 포함되는 모든 문자들을 포함함을 말한다. 이 때 B의 단어 안에서 각 문자가 여러 번 나온다면 그 횟수 만큼을 모두 포함해야 한다. 예를 들어, ["wrr"] 배열이 B이고, A 내 단어 중 "warrior", "warning"이 있을 때 "warrior"만이 universal word가 된다.
 - 나의 풀이: 처음에는 각 A 내 단어에 대해 B의 각 단어의 Counter를 구하면서 비교하고 각 A 단어가 universal인지 아닌지를 판단했다. 하지만 이 경우, A가 m개 B가 n개라면 O(m*n)의 시간 복잡도로 시간 초과가 났다. 다음 풀이로 B내에서 각 단어별로 Counter를 구하고 최댓값을 갱신해 하나의 통합된 B total counter를 만들어, 이 카운터 내에 있는 모든 단어를 Counter에 저장된 갯수 이상으로 포함하는 A의 단어가 universal이라고 판단, 정답에 더했다. 이는 O(m+n) 시간 복잡도를 가진다.
 
+### 0327 Palindromic Substrings
+- 문제: 문자열이 주어졌을 때, palindrome인 substring들의 갯수를 구하는 문제
+
+### 0328 Flip Binary Tree To Match Preorder Traversal
+- 문제: 이진 트리와 preorder traversal로 방문한 노드들의 값 목록이 주어진다. 이 preorder traversal이 가능해지도록 노드에서 "flip"이라는 동작을 할 수 있는데, 이는 해당 노드의 왼쪽 subtree와 오른쪽 subtree를 교체하는 것이다. Flip을 수행해 주어진 preorder traversal 리스트와 동일하게 노드들을 방문할 수 있다면, flip 연산을 진행한 노드들의 값을 담은 배열을 반환하고, 불가능하다면 [-1]을 포함한 베열을 반환하는 문제이다
+- 나의 풀이: DFS로 노드를 타고 들어가며, 만약 left의 값이 preorder traversal의 다음 값과 다르다면 right를 먼저 방문하게끔 하고, 같다면 left를 먼저 방문하게 해 더 깊게 들어갔다. 스택 자료구조를 이용했다
+- 다른 사람의 풀이: 재귀 함수를 이용한 DFS로 함수를 구현했다.
