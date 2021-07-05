@@ -4,6 +4,7 @@
 2. Find K Closest Elements
 3. Max Sum of Rectangle No Larger Than K
 4. Count Vowels Permutation
+5. Reshape the Matrix
 
 
 ### 0701 Gray Code
@@ -35,3 +36,9 @@
 - 풀이:
     - 문자열 길이를 1에서 시작해, 길이를 1씩 증가시킨다. 기존에 있는 문자들의 뒤에 올 수 있는 문자들을 붙이면 된다. 가짓수가 너무 많아질 수 있으므로 매 회 modulo 연산을 해준다
     - 시간 복잡도: O(n). 생성할 문자열의 길이 동안 5개의 문자 종류에 대해 갯수를 새롭게 구하는 연산이다
+
+### 0705 Reshape the Matrix
+- 문제: m*n 행렬을 주어진 r, c 크기로 바꾸되, 원본 데이터와 그 row-traversing 순서를 유지하는 reshape 함수를 구현한다. Reshape 형태가 legal 하다면, 즉 원본 행렬과 동일한 갯수의 원소를 갖는 행렬이어야만 하고, 아닌 경우 원본 행렬을 변화시키지 않는다
+- 풀이:
+    - r * c가 기존 m * n과 같은 값을 갖는지 확인한 뒤, 기존 행렬 내 모든 원소르르 row-traversing 순으로 순회하며 새로운 r, c에 맞추어 배열을 만든다
+    - 시간 복잡도: O(m*n)
