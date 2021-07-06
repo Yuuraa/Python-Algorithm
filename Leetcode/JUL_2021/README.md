@@ -5,6 +5,7 @@
 3. Max Sum of Rectangle No Larger Than K
 4. Count Vowels Permutation
 5. Reshape the Matrix
+6. Reduce Array Size to The Half
 
 
 ### 0701 Gray Code
@@ -42,3 +43,8 @@
 - 풀이:
     - r * c가 기존 m * n과 같은 값을 갖는지 확인한 뒤, 기존 행렬 내 모든 원소르르 row-traversing 순으로 순회하며 새로운 r, c에 맞추어 배열을 만든다
     - 시간 복잡도: O(m*n)
+
+### 0706 Reduce Array Size to The Half
+- 문제: 리스트 arr가 주어졌을 때, arr의 크기를 절반 이하로 줄이기 위해 제거해야하는 element set의 최소 갯수를 구한다
+- 풀이:
+    - Counter로 arr 내에서 element들의 등장 횟수를 잰다. 가장 많이 등장하는 element부터 순차적으로 등장 횟수를 추가하고, 그 합이 arr의 크기 절반 이하가 되면 지금까지 지운 element의 종류수를 반환한다
