@@ -6,6 +6,7 @@
 4. Count Vowels Permutation
 5. Reshape the Matrix
 6. Reduce Array Size to The Half
+7. Kth Smallest Element in a Sorted Matrix
 
 
 ### 0701 Gray Code
@@ -48,3 +49,9 @@
 - 문제: 리스트 arr가 주어졌을 때, arr의 크기를 절반 이하로 줄이기 위해 제거해야하는 element set의 최소 갯수를 구한다
 - 풀이:
     - Counter로 arr 내에서 element들의 등장 횟수를 잰다. 가장 많이 등장하는 element부터 순차적으로 등장 횟수를 추가하고, 그 합이 arr의 크기 절반 이하가 되면 지금까지 지운 element의 종류수를 반환한다
+
+### 0707 Kth Smallest Element in a Sorted Matrix
+- 문제: n x n 행렬 matrix가 주어졌을 때, 그 안에서 k 번째로 작은 원소를 반환한다.
+- 풀이:
+    - row-wise, column-wise로 정렬된 것이 주어지므로 이분탐색에 활용할 수는 없을지 고민했지만, 왼쪽 아래와 우측 상단의 것에서 더 작은 원소가 등장할 수도 있어서 관두었다...
+    - 그냥 전체 matrix를 정렬한 후 k 번째 element를 반환하도록 했다
