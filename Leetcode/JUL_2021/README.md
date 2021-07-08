@@ -7,6 +7,7 @@
 5. Reshape the Matrix
 6. Reduce Array Size to The Half
 7. Kth Smallest Element in a Sorted Matrix
+8. Maximum Length of Repeated Subarray
 
 
 ### 0701 Gray Code
@@ -55,3 +56,9 @@
 - 풀이:
     - row-wise, column-wise로 정렬된 것이 주어지므로 이분탐색에 활용할 수는 없을지 고민했지만, 왼쪽 아래와 우측 상단의 것에서 더 작은 원소가 등장할 수도 있어서 관두었다...
     - 그냥 전체 matrix를 정렬한 후 k 번째 element를 반환하도록 했다
+
+### 0708 Maximum Length of Repeated Subarray
+- 문제: 두 개의 정수로 이루어진 배열이 주어졌을 때, 두 배열에 모두 등장하는 subarray의 최고 길이를 구하는 문제이다
+- 풀이: subarray 문제는 Longest Common Substring 문제와 동일하게 풀면 될 것이라고 생각했다
+    - DP로 지금까지 나온 common substring의 길이를 저장한다. 두 개의 배열에 대해 각자 index를 두고 순회하며, 배열에서 i, j에서의 값이 같을 때에는 i-1, j-1까지의 substring 길이에 +1을 해주고, 아니라면 0을 설정해준다. 이 과정에서 최대 길이는 계속 업데이트 해준다
+    - 시간 복잡도: 두 개의 배열에 대해 끝까지 순회하기 때문에, 각 길이를 m, n이라고 하면 O(m*n) 시간 복잡도가 걸린다
