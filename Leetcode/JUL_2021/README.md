@@ -8,6 +8,7 @@
 6. Reduce Array Size to The Half
 7. Kth Smallest Element in a Sorted Matrix
 8. Maximum Length of Repeated Subarray
+9. Longest Increasing Subsequence
 
 
 ### 0701 Gray Code
@@ -62,3 +63,9 @@
 - 풀이: subarray 문제는 Longest Common Substring 문제와 동일하게 풀면 될 것이라고 생각했다
     - DP로 지금까지 나온 common substring의 길이를 저장한다. 두 개의 배열에 대해 각자 index를 두고 순회하며, 배열에서 i, j에서의 값이 같을 때에는 i-1, j-1까지의 substring 길이에 +1을 해주고, 아니라면 0을 설정해준다. 이 과정에서 최대 길이는 계속 업데이트 해준다
     - 시간 복잡도: 두 개의 배열에 대해 끝까지 순회하기 때문에, 각 길이를 m, n이라고 하면 O(m*n) 시간 복잡도가 걸린다
+
+### 0709 Longest Increasing Subsequence
+- 문제: nums라는 배열이 가장 긴 증가하는 부분수열의 길이를 찾는 문제
+- 풀이: 
+    - LIS 문제는 대표적인 다이나믹 프로그래밍 문제이다. DP 배열의 i 번째에는 nums[i]를 포함하는 그 때까지의 longest increasing subsequence의 길이가 담겨 있다. 이는 i 이전까지의 DP, nums를 확인하면서 i 번째 원소보다 작은 원소의 DP 값에 1을 더한 것의 최댓값을 구하며 DP를 업데이트 한다. 마지막에 남은 DP 값들 중 최댓값을 반환하면 LIS를 구할 수 있다
+    - 시간 복잡도: O(n^2)
