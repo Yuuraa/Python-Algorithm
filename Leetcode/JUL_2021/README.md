@@ -11,6 +11,7 @@
 9. Longest Increasing Subsequence
 10. Decode Ways II
 11. Find Median from Data Stream
+12. Isomorphic Strings
 
 ### 0701 Gray Code
 - 문제: n이 주어졌을 때, n개 bit으로 만들 수 있는 graycode를 찾는 문제
@@ -90,3 +91,8 @@
     - 중앙값을 구할 때 시간 복잡도: O(1)
 - 추가 문제: 만약 모든 숫자들이 0 ~ 100사이에 있다면, 어떻게 문제를 효율적으로 풀 수 있을까?
 - 추가 문제2: 만약 숫자들의 99%가 0 ~ 100사이에 있다면, 어떻게 문제를 효율적으로 풀 수 있을까?
+
+### 0712 Isomorphic Strings
+- 문제: s 내의 문자들을 대체해서 t 를 만들 수 있을 때, s와 t가 isomorphic string이라고 합니다. s와 t가 주어졌을 때, isomorphic string인지 구하는 문제입니다
+- 풀이:
+    - s -> t, t -> s 변환 매핑을 구해두고, 매핑에 맞지 않는 문자가 나오면 False를 반환합니다
