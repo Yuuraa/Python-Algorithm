@@ -12,6 +12,9 @@
 10. Decode Ways II
 11. Find Median from Data Stream
 12. Isomorphic Strings
+13. Find Peak Element
+14. Custom Sort String
+
 
 ### 0701 Gray Code
 - 문제: n이 주어졌을 때, n개 bit으로 만들 수 있는 graycode를 찾는 문제
@@ -96,3 +99,16 @@
 - 문제: s 내의 문자들을 대체해서 t 를 만들 수 있을 때, s와 t가 isomorphic string이라고 합니다. s와 t가 주어졌을 때, isomorphic string인지 구하는 문제입니다
 - 풀이:
     - s -> t, t -> s 변환 매핑을 구해두고, 매핑에 맞지 않는 문자가 나오면 False를 반환합니다
+
+
+### 0713 Find Peak Element
+- 문제: 정수의 배열 nums가 주어졌을 때, peak element의 인덱스를 반환한다. Peak element란 이웃들 보다 값이 큰 원소를 말한다. 알고리즘은 시간 복잡도가 O(log n)을 넘지 않도록 해야 한다
+- 풀이:
+    - 이진 탐색으로 문제를 풀 수 있다
+
+
+### 0714 Custom Sort String
+- 문제: order와 문자열이 주어졌을 때, order 주어진 순서에 맞도록 주어진 문자열을 변형한다
+- 풀이:
+    - 주어진 순서에 맞게 바꿔야 하는 문자열들을 따로 빼어 정렬하고, 문자열을 순회하며 순서에 따라 바꿔야 하는 문자열들을 정렬한다
+    - 시간 복잡도: O(n). n 은 주어진 문자열의 길이
