@@ -15,6 +15,10 @@
 13. Find Peak Element
 14. Custom Sort String
 15. Valid Triangle Number
+16. 
+17. 
+18. Reverse Nodes in k-Group
+19. Lowest Common Ancestor of a Binary Search Tree
 
 
 ### 0701 Gray Code
@@ -120,3 +124,16 @@
 - 풀이:
     - nums를 정렬한다
     - 정렬된 nums 배열 중에서, 각 인덱스 위치마다 그 이전까지 두 개의 포인터를 두고, 합을 했을 때 현재 인덱스 위치의 값보다 크다면 삼각형을 만들 수 있으므로 갯수를 추가한다
+
+
+### 0718 Reverse Nodes in k-Group
+- 문제: 링크드리스트와 숫자 k 가 주어졌을 때, k 길이 만큼의 부분 리스트들을 처음부터 순차적으로 뒤집는다. 만약 링크드리스트의 길이가 k 의 배수가 아니라면, 나머지는 뒤집지 않고 그대로 반환한다. 추가 공간은 O(1) 만큼 사용한다
+- 풀이:
+    - prev 포인터, s 포인터, k 개 뒤인 e 포인터를 두고 그 만큼을 뒤집은 뒤, prev 포인터가 가리킨 노드의 다음 노드를  e 포인터로 변경한다. 이 과정을 k개짜리 노드 부분 연결 리스트들에 대해 모두 수행한다
+    - 시간 복잡도: O(n)
+
+### 0719 Lowest Common Ancestor of a Binary Search Tree
+- 문제: 이진 탐색 트리와 두 노드 p, q 가 주어졌을 때, 트리 내 p, q의 lowest common ancestor를 찾는 문제다
+- 풀이: 
+    - 이진 탐색 트리이기 때문에, 공유되는 root가 있다면 그 root에서 갈라진 부분 트리에 있거나, p와 q 중 한 노드가 그 공통 ancestor인 경우가 된다. 따라서, 일단 더 작은 값을 가진 node를 p로 설정한 뒤 root와 p, q의 값을 비교했다. root의 값으로 p와 q의 값이 갈라지면, 해당 root가 공통 ancestor이다. 아니라면 p와 q 모두 root보다 값이 작거나 크므로 그에 따라 root 왼쪽 또는 오른쪽 자식 노드를 새로운 root로 삼으며 반복한다.
+    - 시간 복잡도: O(logn). 최악의 경우 트리의 leaf node 직전까지 순회하게 되며, 이진 분류 트리이기 때문에 트리의 최고 깊이는 logn이다
