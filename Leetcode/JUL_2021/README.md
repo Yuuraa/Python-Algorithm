@@ -19,6 +19,7 @@
 17. 
 18. Reverse Nodes in k-Group
 19. Lowest Common Ancestor of a Binary Search Tree
+20. Shuffle an Array
 
 
 ### 0701 Gray Code
@@ -137,3 +138,8 @@
 - 풀이: 
     - 이진 탐색 트리이기 때문에, 공유되는 root가 있다면 그 root에서 갈라진 부분 트리에 있거나, p와 q 중 한 노드가 그 공통 ancestor인 경우가 된다. 따라서, 일단 더 작은 값을 가진 node를 p로 설정한 뒤 root와 p, q의 값을 비교했다. root의 값으로 p와 q의 값이 갈라지면, 해당 root가 공통 ancestor이다. 아니라면 p와 q 모두 root보다 값이 작거나 크므로 그에 따라 root 왼쪽 또는 오른쪽 자식 노드를 새로운 root로 삼으며 반복한다.
     - 시간 복잡도: O(logn). 최악의 경우 트리의 leaf node 직전까지 순회하게 되며, 이진 분류 트리이기 때문에 트리의 최고 깊이는 logn이다
+
+### 0720 Shuffle an Array
+- 문제: 배열 nums가 주어졌을 때, 배열을 shuffle 하거나 원래 상태로 되돌려놓는 함수를 작성하는 문제
+- 풀이:
+    - random.shuffle을 이용해 배열을 섞어냈다
