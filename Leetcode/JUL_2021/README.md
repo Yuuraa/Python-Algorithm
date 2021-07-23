@@ -22,6 +22,7 @@
 20. Shuffle an Array
 21. Push Dominoes
 22. Partition Array into Disjoint Intervals
+23. Binary Tree Pruning
 
 
 ### 0701 Gray Code
