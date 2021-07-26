@@ -46,8 +46,6 @@
 
 ### 0703 Max Sum of Rectangle No Larger Than K
 - 문제: m x n 행렬과 정수 k가 주어졌을 때, 직사각형 submatrix의 원소의 합 중 k 이하의 최댓값을 구한다
-- 풀이:
-    - 
 
 ### 0704 Count Vowels Permutation
 - 문제: 숫자 n 이 주어졌을 때, a, e, i, o, u로 만들 수 있는 n 길이의 문자열의 수를 구하는 문제. 단, a -> e, e -> a, i, i -> a, e, o, u, o -> i, u, u -> a 로 각 문자 뒤에 올 수 있는 문자들이 정해져 있다. 숫자가 너무 클 수 있으므로 10^9 + 7에 대한 나머지를 반환한다
@@ -170,3 +168,14 @@
     - 2. 그 후, 자신의 값이 1이면 참을 반환하고, 0이면 자식 노드중에 1을 포함하는 것이 있다면 참, 아니라면 거짓을 반환한다
     - 이를 통해 자식 노드에 대해 이를 호출하면, 거짓을 반환하면 해당 subtree에는 1이 존재하지 않음을 알 수 있다
     - 이 과정을 반복하고, 마지막 root Node까지 확인하는 방법으로 check_prune(root)를 호출하고 해당 반환값을 확인해 거짓이 나오면 결과적으로 트리 자체를 삭제한다
+
+
+### 0724 Word Ladder II
+- 문제: beginWord에서 endWord까지, 한 문자씩 만을 바꾸면서 sequence를 만들 수 있다. 주어진 wordList안의 단어들을 사용해서 sequence를 만들고, 그 때 단어들을 최소한으로 사용하는 sequence들을 모두 반환한다
+- 나의 풀이:
+    - 
+
+### 0726 Convert Sorted Array to Binary Search Tree
+- 문제: 정렬된 배열을 height-balanced BST로 변환하는 문제이다. height-balanced란, 모든 노드에서의 subtree의 깊이가 1 이상 차이나지 않는 것을 말한다
+- 나의 풀이:
+    - 배열의 가운데 값을 root로 한 subtree를 만들며 이어 붙이면 된다
