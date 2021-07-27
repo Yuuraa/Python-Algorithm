@@ -179,3 +179,9 @@
 - 문제: 정렬된 배열을 height-balanced BST로 변환하는 문제이다. height-balanced란, 모든 노드에서의 subtree의 깊이가 1 이상 차이나지 않는 것을 말한다
 - 나의 풀이:
     - 배열의 가운데 값을 root로 한 subtree를 만들며 이어 붙이면 된다
+
+
+### 0727 3Sum Closest
+- 문제: 숫자들의 배열 nums와 목표 target이 주어졌을 때, nums 내에서 3 개의 숫자를 더해 만들 수 있는 target과 가장 가까운 숫자를 골느다
+- 나의 풀이:
+    - i를 점차 len(nums) - 2까지 증가시키며, i 뒤의 배열에서 two-pointer를 이용해 가장 합이 target과 가까운 것을 구해 나갔다. 순회를 마치고 최종적으로 가장 가까운 값을 반환한다
