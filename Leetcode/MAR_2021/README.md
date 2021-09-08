@@ -26,7 +26,9 @@
 - [0325 water_flow.py]()
 - [0326 word_subsets.py]()
 - [0327 palindromic_substrings.py]()
+
 - [0329 filp_bintree_preorder.py]()
+- [0330 max_envelopes.py]()
 
 ### 0301 Distribute Candies
 - 문제: 전체 캔디 수의 절반 만을 먹을 수 있는 앨리스가, 먹을 수 있는 캔디 종류의 최댓값을 구하는 문제
@@ -164,7 +166,14 @@
 ### 0327 Palindromic Substrings
 - 문제: 문자열이 주어졌을 때, palindrome인 substring들의 갯수를 구하는 문제
 
-### 0328 Flip Binary Tree To Match Preorder Traversal
+### 0329 Flip Binary Tree To Match Preorder Traversal
 - 문제: 이진 트리와 preorder traversal로 방문한 노드들의 값 목록이 주어진다. 이 preorder traversal이 가능해지도록 노드에서 "flip"이라는 동작을 할 수 있는데, 이는 해당 노드의 왼쪽 subtree와 오른쪽 subtree를 교체하는 것이다. Flip을 수행해 주어진 preorder traversal 리스트와 동일하게 노드들을 방문할 수 있다면, flip 연산을 진행한 노드들의 값을 담은 배열을 반환하고, 불가능하다면 [-1]을 포함한 베열을 반환하는 문제이다
 - 나의 풀이: DFS로 노드를 타고 들어가며, 만약 left의 값이 preorder traversal의 다음 값과 다르다면 right를 먼저 방문하게끔 하고, 같다면 left를 먼저 방문하게 해 더 깊게 들어갔다. 스택 자료구조를 이용했다
 - 다른 사람의 풀이: 재귀 함수를 이용한 DFS로 함수를 구현했다.
+
+### 0330 Russian Doll Envelopes
+- 문제: 
+- 나의 풀이:
+
+### 0331 Stamping The Sequence
+- 무넺: 

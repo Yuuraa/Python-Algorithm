@@ -1,8 +1,9 @@
-# LeetCode 2월 문제 풀이 목록
+# LeetCode 4월 문제 풀이 목록
 - [0401 linked_palindrome.py]()
 - [0402 ones_and_zeros.py]()
 - [0403 longest_parenthesis.py]()
 - [0404 circular_queue.py]()
+- [0405 global_local_inversions.py]()
 
 
 ### 0401 Palindrome Linked List
@@ -24,3 +25,7 @@
 ### 0404 Design Circular Queue
 - 문제: Circular Queue 클래스를 구현하는 문제
 - 나의 풀이: val들을 담는 고정 길이의 배열과 그 배열의 길이를 나타내는 max_len, circular queue의 시작점을 알리는 head, 길이를 나타내는 length를 변수로 가진 클래스를 구현했다
+
+### 0405 Global and Local Inversions
+- 문제: 0 ~ N-1 사이의 순열인 A가 있을 때 global한 inversion의 갯수와(i< j 에 대해 i와 j 비교) local한 inversion의 갯수(i와 i+1 비교)가 같은지 여부를 반환한다
+- 나의 풀이: O(N)의 시간이 걸리도록 local inversion의 수와 global inversion의 수를 셌다.

@@ -1,5 +1,6 @@
 # Leetcode 2021 6월 문제 풀이 목록
 - [0622 num_matching_subseqs.py]()
+- [0623 reversed_linked_list_2.py]()
 
 ### 0622 Number of Matching Subsequences
 문자열 s와 다른 문자열들의 배열 w가 주어졌을 때, w 내에서 s의 subsequence인 문자열들의 수를 세는 문제.
@@ -10,3 +11,5 @@
 다음 풀이에서는 w내 비교할 문자열을 stack으로 보고, s와 비교 문자열을 뒤부터 순회하며 겹치는 element가 있다면 stack에서 element를 빼고, 아니라면 s의 앞 문자를 비교한다. 만약 subsequence의 조건을 만족하면 도중에 그만두고, 아닌 경우 s를 맨 처음까지 확인한다. 
 - 따라서 한 쌍의 문자열을 비교할 때 O(m)의 시간을 소요하게 된다 (m은 s의 길이)
 w내 겹치는 문자열에 대해서는 Counter를 사용해 반복 계산이 없도록 했다
+
+### 0623 Reversed Linked List II
