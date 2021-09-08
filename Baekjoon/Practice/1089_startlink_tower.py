@@ -5,6 +5,7 @@ possible_rep = True
 
 from collections import defaultdict
 
+# TODO: reduce를 내서 풀어볼 것!!
 on_numbers = defaultdict(list)
 on_numbers[0] = [0, 2, 3, 4, 5, 6, 7, 8, 9]
 on_numbers[1] = [0, 2, 3, 5, 6, 7, 8, 9]
